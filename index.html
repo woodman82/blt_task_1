@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>BrightLynxTeam - Test Task 1</title>
+		<style type="text/css">
+			.calcbox {
+				border: 1px solid black;
+				width: 170px;
+
+				margin: 50px auto 20px auto;
+				padding: 10px;
+			}
+			label {
+				font-weight: bold;
+			}
+			input[type="number"] {
+				margin-bottom: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="calcbox">
+			<label for="id_num1">Первое число:</label>
+			<input type="number" name="num1" id="id_num1" maxlength="30" value="0.1">
+
+			<label for="id_num2">Второе число:</label>
+			<input type="number" name="num2" id="id_num2" maxlength="30" value="0.2">
+
+			<input type="button" name="btn_summ" id="id_btnSumm" value="Сложить">
+		</div>
+
+		<script type="text/javascript">
+			let btnSumm = document.getElementById('id_btnSumm');
+			btnSumm.onclick = function () {
+				let num1 = +document.getElementById('id_num1').value;
+				let num2 = +document.getElementById('id_num2').value;
+				let res = num1 + num2;
+				res = +res.toFixed(10);
+				alert('Результат: \n' + res);
+			}
+		</script>
+</body></html>		
